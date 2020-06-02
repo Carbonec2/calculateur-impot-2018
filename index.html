@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <title>Calculateur de retour d'impôt</title>
+        <link rel= stylesheet type="text/css" href="taxCalculator.css" ></link>
+        <script type="text/javascript" src="taxCalculator.js" ></script>
+        <script type="text/javascript" src="taxCalculator-model.js" ></script>
+        <script type="text/javascript" src="consoleLogger.js" ></script>
+        <meta charset="UTF-8">
+        <style>
+        td{
+            text-align:center;
+        }
+        </style>
+    </head>
+    <body>
+	<div id="taxCalculator">
+        <div id="console" class="logConsole"></div>
+        <p style="text-align:center;">Ce calculateur vous permet de déterminer quel sera votre retour d'impôt suite à une cotisation à votre REER pour l'année d'imposition 2018, au Québec.</p>
+		 <p style="text-align:center;">Les taux d'imposition fédéraux tiennent compte de l'abattement fédéral pour les résidents du Québec. 
+		 La table est sommairement calquée sur la <a href="https://www.desjardins.com/ressources/pdf/table-impot-p-quebec-2018-f.pdf">table d'imposition 2018 de Desjardins</a></p>
+        <div style="text-align:center;">
+            <input type="text" id="income" placeholder="Revenu" style="border-radius:4px;padding:5px; display:inline-block;"/><br/>
+            <input type="text" id="cotisation" placeholder="Montant de la cotisation" style="border-radius:4px;padding:5px; display:inline-block;"/><br/>
+            <input type="button" value="Envoyer" id="calculate" style="width:100px; height:50px; display:inline-block; margin:10px;"/>
+        </div>
+        <br/>
+        <div id="taxReturn">
+            <table style="width:400px; margin:auto; border-collapse:collapse; border:1px solid black;">
+                <tr style="border:1px solid black;">
+                    <td style="border:1px solid black;">Retour d'impôt</td>
+                    <td id="taxReturnField" style="background-color:green; color:white; weight:bold; border:1px solid black;"></td>
+                </tr>
+            </table>
+        </div>
+        <br/><br/>
+        <div id="tableBeforeCotisation"></div>
+        <br/><br/>
+        <div id="tableAfterCotisation"></div>
+		</div>
+    </body>
+</html>
